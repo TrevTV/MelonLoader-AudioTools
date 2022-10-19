@@ -32,4 +32,4 @@ I added some stupid thing where if you have an audio file named REPLACE_ALL, it 
 
 ## Credits/Licensing
 - [Hello-Meow/AudioImporter](https://github.com/Hello-Meow/AudioImporter), modified, under the [MIT License](https://github.com/Hello-Meow/AudioImporter/blob/master/LICENSE)
-- [Un4Seen/BASS/BASS.NET](https://www.un4seen.com/), BASS.NET in decompiled form, BASS in compiled form, under a free for commercial use license. It doesn't have a direct link, but it's on the linked website.
+- [Un4Seen/BASS/BASS.NET](https://www.un4seen.com/), BASS.NET in decompiled form, BASS in compiled form, under a free for non-commercial use license. It doesn't have a direct link, but it's on the linked website.
