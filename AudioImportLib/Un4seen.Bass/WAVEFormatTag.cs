@@ -1,0 +1,27 @@
+namespace Un4seen.Bass
+{
+	public enum WAVEFormatTag : short
+	{
+		UNKNOWN = 0,
+		PCM = 1,
+		ADPCM = 2,
+		IEEE_FLOAT = 3,
+		DOLBY_AC2 = 48,
+		GSM610 = 49,
+		MSNAUDIO = 50,
+		MPEG = 80,
+		MPEGLAYER3 = 85,
+		DOLBY_AC3_SPDIF = 146,
+		RAW_AAC1 = 0xFF,
+		MSAUDIO1 = 352,
+		WMA = 353,
+		WMA_PRO = 354,
+		WMA_LOSSLESS = 355,
+		WMA_SPDIF = 356,
+		MPEG_ADTS_AAC = 5632,
+		MPEG_RAW_AAC = 5633,
+		MPEG_LOAS = 5634,
+		MPEG_HEAAC = 5648,
+		EXTENSIBLE = -2
+	}
+}

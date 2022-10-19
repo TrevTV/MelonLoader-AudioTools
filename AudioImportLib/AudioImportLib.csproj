@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C33921DC-5778-4EEC-A2D0-E0AE522CC701}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AudioImportLib</RootNamespace>
+    <AssemblyName>AudioImportLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Il2Cppmscorlib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader, Version=0.4.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnhollowerBaseLib, Version=0.4.15.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BONELAB\MelonLoader\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioImporter\AudioImporter.cs" />
+    <Compile Include="AudioImporter\BassImporter.cs" />
+    <Compile Include="AudioImporter\DecoderImporter.cs" />
+    <Compile Include="Un4seen.Bass\Bass.cs" />
+    <Compile Include="Un4seen.Bass\BASS3DAlgorithm.cs" />
+    <Compile Include="Un4seen.Bass\BASS3DMode.cs" />
+    <Compile Include="Un4seen.Bass\BASSActive.cs" />
+    <Compile Include="Un4seen.Bass\BASSAttribute.cs" />
+    <Compile Include="Un4seen.Bass\BASSBuffer.cs" />
+    <Compile Include="Un4seen.Bass\BASSChannelType.cs" />
+    <Compile Include="Un4seen.Bass\BASSConfig.cs" />
+    <Compile Include="Un4seen.Bass\BASSData.cs" />
+    <Compile Include="Un4seen.Bass\BASSDeviceInfo.cs" />
+    <Compile Include="Un4seen.Bass\BASSDirectSound.cs" />
+    <Compile Include="Un4seen.Bass\BASSError.cs" />
+    <Compile Include="Un4seen.Bass\BASSFlag.cs" />
+    <Compile Include="Un4seen.Bass\BASSFXPhase.cs" />
+    <Compile Include="Un4seen.Bass\BASSFXType.cs" />
+    <Compile Include="Un4seen.Bass\BASSInfo.cs" />
+    <Compile Include="Un4seen.Bass\BASSInit.cs" />
+    <Compile Include="Un4seen.Bass\BASSInput.cs" />
+    <Compile Include="Un4seen.Bass\BASSInputType.cs" />
+    <Compile Include="Un4seen.Bass\BASSLevel.cs" />
+    <Compile Include="Un4seen.Bass\BASSMode.cs" />
+    <Compile Include="Un4seen.Bass\BassNet.cs" />
+    <Compile Include="Un4seen.Bass\BASSRecordFormat.cs" />
+    <Compile Include="Un4seen.Bass\BASSRecordInfo.cs" />
+    <Compile Include="Un4seen.Bass\BASSStreamFilePosition.cs" />
+    <Compile Include="Un4seen.Bass\BASSStreamProc.cs" />
+    <Compile Include="Un4seen.Bass\BASSStreamSystem.cs" />
+    <Compile Include="Un4seen.Bass\BASSSync.cs" />
+    <Compile Include="Un4seen.Bass\BASSTag.cs" />
+    <Compile Include="Un4seen.Bass\BASSTimer.cs" />
+    <Compile Include="Un4seen.Bass\BASSVam.cs" />
+    <Compile Include="Un4seen.Bass\BASS_3DVECTOR.cs" />
+    <Compile Include="Un4seen.Bass\BASS_CHANNELINFO.cs" />
+    <Compile Include="Un4seen.Bass\BASS_CHANNELINFO_INTERNAL.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DEVICEINFO.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DEVICEINFO_INTERNAL.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_CHORUS.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_COMPRESSOR.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_DISTORTION.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_ECHO.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_FLANGER.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_GARGLE.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_I3DL2REVERB.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_PARAMEQ.cs" />
+    <Compile Include="Un4seen.Bass\BASS_DX8_REVERB.cs" />
+    <Compile Include="Un4seen.Bass\BASS_FILEPROCS.cs" />
+    <Compile Include="Un4seen.Bass\BASS_FX_VOLUME_PARAM.cs" />
+    <Compile Include="Un4seen.Bass\BASS_INFO.cs" />
+    <Compile Include="Un4seen.Bass\BASS_PLUGINFORM.cs" />
+    <Compile Include="Un4seen.Bass\bass_plugininfo.cs" />
+    <Compile Include="Un4seen.Bass\BASS_RECORDINFO.cs" />
+    <Compile Include="Un4seen.Bass\BASS_SAMPLE.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_APE_BINARY.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_BEXT.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_CACODEC.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_CART.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_CUE.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_CUE_POINT.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_DSD_COMMENT.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_FLAC_CUE.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_FLAC_CUE_TRACK.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_FLAC_CUE_TRACK_INDEX.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_FLAC_PICTURE.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_ID3.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_SMPL.cs" />
+    <Compile Include="Un4seen.Bass\BASS_TAG_SMPL_LOOP.cs" />
+    <Compile Include="Un4seen.Bass\DOWNLOADPROC.cs" />
+    <Compile Include="Un4seen.Bass\DSPPROC.cs" />
+    <Compile Include="Un4seen.Bass\EAXEnvironment.cs" />
+    <Compile Include="Un4seen.Bass\EAXPreset.cs" />
+    <Compile Include="Un4seen.Bass\FILECLOSEPROC.cs" />
+    <Compile Include="Un4seen.Bass\FILELENPROC.cs" />
+    <Compile Include="Un4seen.Bass\FILEREADPROC.cs" />
+    <Compile Include="Un4seen.Bass\FILESEEKPROC.cs" />
+    <Compile Include="Un4seen.Bass\RECORDPROC.cs" />
+    <Compile Include="Un4seen.Bass\STREAMPROC.cs" />
+    <Compile Include="Un4seen.Bass\SYNCPROC.cs" />
+    <Compile Include="Un4seen.Bass\Utils.cs" />
+    <Compile Include="Un4seen.Bass\WAVEFORMATEX.cs" />
+    <Compile Include="Un4seen.Bass\WAVEFORMATEXT.cs" />
+    <Compile Include="Un4seen.Bass\WAVEFormatTag.cs" />
+    <Compile Include="API.cs" />
+    <Compile Include="DllTools.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bass.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\BONELAB\Mods"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
