@@ -33,3 +33,6 @@ I added some stupid thing where if you have an audio file named REPLACE_ALL, it 
 ## Credits/Licensing
 - [Hello-Meow/AudioImporter](https://github.com/Hello-Meow/AudioImporter), modified, under the [MIT License](https://github.com/Hello-Meow/AudioImporter/blob/master/LICENSE)
 - [Un4Seen/BASS/BASS.NET](https://www.un4seen.com/), BASS.NET in decompiled form, BASS in compiled form, under a free for non-commercial use license. It doesn't have a direct link, but it's on the linked website.
+- [Neos-Metaverse/cscore](https://github.com/Neos-Metaverse/cscore), modified, under the [Microsoft Public License](https://github.com/Neos-Metaverse/cscore/blob/master/license.md)
+- [NVorbis/NVorbis](https://github.com/NVorbis/NVorbis), under the [MIT license](https://github.com/NVorbis/NVorbis/blob/master/LICENSE)
+- [naudio/NLayer](https://github.com/naudio/NLayer), under the [MIT license](https://github.com/naudio/NLayer/blob/master/LICENSE)

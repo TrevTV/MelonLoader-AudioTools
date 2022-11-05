@@ -15,7 +15,7 @@ namespace AudioImportLib
     {
         public override void OnApplicationQuit()
         {
-            if (API.hasLoadedLib)
+            if (API.hasLoadedLib && !API.isRunningAndroid)
                 DllTools.FreeLibrary(API.bassLibrary);
         }
     }

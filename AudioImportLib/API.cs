@@ -3,18 +3,23 @@ using System;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace AudioImportLib
 {
     public static class API
     {
-        internal static BassImporter bassImporter;
+        internal static DecoderImporter importer;
         internal static IntPtr bassLibrary;
         internal static bool hasLoadedLib;
+        internal static string bassLibName;
+        internal static bool isRunningAndroid;
 
-        internal static void SetupBASSImporter()
+        internal static void SetupImporter()
         {
-            if (!hasLoadedLib)
+            isRunningAndroid = MelonUtils.CurrentPlatform == (MelonPlatformAttribute.CompatiblePlatforms)3;
+
+            if (!hasLoadedLib && !isRunningAndroid)
             {
                 string appDataPath = Path.Combine(MelonUtils.UserDataDirectory, "AudioImportLib");
                 string bassDllPath = Path.Combine(appDataPath, "bass.dll");
@@ -32,13 +37,13 @@ namespace AudioImportLib
                     }
                 }
 
-                MelonLogger.Msg(bassDllPath);
+                MelonLogger.Msg("Loading BASS from " + bassDllPath);
                 bassLibrary = DllTools.LoadLibrary(bassDllPath);
                 hasLoadedLib = true;
             }
 
-            if (bassImporter == null)
-                bassImporter = new BassImporter();
+            if (importer == null)
+                importer = isRunningAndroid ? new CSCoreImporter() : new BassImporter();
         }
 
         public static AudioClip LoadAudioClip(string absolutePathToFile, bool dontUnloadUnusedAsset = true)
@@ -49,18 +54,18 @@ namespace AudioImportLib
                 return null;
             }
 
-            SetupBASSImporter();
-            bassImporter.Import(absolutePathToFile);
-            if (bassImporter.audioClip == null)
+            SetupImporter();
+            importer.Import(absolutePathToFile);
+            if (importer.audioClip == null)
             {
                 MelonLogger.Error($"Failed to load audio clip from \"{absolutePathToFile}\"!");
                 return null;
             }
 
             if (dontUnloadUnusedAsset)
-                bassImporter.audioClip.hideFlags = HideFlags.DontUnloadUnusedAsset;
+                importer.audioClip.hideFlags = HideFlags.DontUnloadUnusedAsset;
 
-            return bassImporter.audioClip;
+            return importer.audioClip;
         }
     }
 }
